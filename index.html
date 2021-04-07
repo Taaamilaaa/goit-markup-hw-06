@@ -347,11 +347,19 @@
                         </li>
                         </ul>
                     </div>
-                    <div class="footer-part">
-                        <form action="">
-                            <h2></h2>
-                            <input type="email">
-                        </form>
+                    <div class="footer-part footer-form">
+                        <form name="email">
+                            <label class="footer-title footer-label" for="email">Подпишитесь на рассылку</label>
+                            <div class="email-form">
+                                <input placeholder="E-mail" class="email-input" name="email" type="email">
+                            <button type="submit" class="footer-button">Подписаться
+                                <svg class="icon-send" width=24 height=24>
+                                    <use href="./images/symbol-defs.svg#icon-send"></use>
+                                </svg>
+                            </button>
+                            </div>
+                           
+                       </form>
                     </div>
                 </div>
             </div>
@@ -360,10 +368,28 @@
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button data-modal-close class="modal-close-btn">
-                    <svg class="close-icon">
+                    <svg width=18 height=18 class="close-icon">
                         <use href="./images/sprite-all.svg#icon-close"></use>
                     </svg>
                 </button>
+                <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+                <form class="modal-form" name="contacts">
+                    
+                           <label class="label-form" for="name">Имя</label>
+                            <input class="input" name="name" type="text" id="name">
+                        
+                            <label class="label-form" for="tel">Телефон</label>
+                            <input class="input" name="tel" type="tel" id="tel">
+                        
+                            <label class="label-form" for="mail">Почта</label>
+                            <input class="input" name="mail" type="email" id="email">
+                        
+                        <label class="label-form"name="comments">Комментарий</label>
+                        <textarea class="input comments" id="comments" name="comments" placeholder="Введите текст" cols="30" rows="6"></textarea>
+                      
+                        <input class="agree-chackbox" name="agree" type="checkbox" > <label class="agree-text" id="agree" for="agree">Соглашаюсь с рассылкой и принимаю <a class="agree-link" href="">Условия договора</a></label>
+                    <button class="modal-button" type="submit">Отправить</button>
+                </form>
             </div>
             
         </div>

@@ -496,16 +496,14 @@ img {
   padding-top: 27px;
   padding-bottom: 27px;
   background-color: rgba(47, 48, 58, 0.8);
- 
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
   color: var(--complementary-color);
- }
-
-
+}
 .filtr-img {
   position: relative;
   overflow: hidden;
@@ -556,13 +554,15 @@ img {
   min-height: 581px;
   border-radius: 4px;
 
-  padding: 8px;
+  padding: 40px 41px;
 
   background-color: var(--complementary-color);
 }
 
 .modal-close-btn {
-  display: inline-flex;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   margin-left: auto;
 
   width: 30px;
@@ -570,10 +570,12 @@ img {
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
 
   background-color: inherit;
   display: flex;
   text-align: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -586,6 +588,87 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* modal-form */
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-color);
+}
+.input {
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid rgba(21, 21, 21, 0.2);
+  border-radius: 4px;
+}
+.label-form {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--main-text-color);
+}
+
+.comments {
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.agree-chackbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+}
+.agree-text {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--main-text-color);
+}
+.agree-link {
+  color: var(--accent-color);
+}
+.modal-button {
+  min-width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  border-style: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  background-color: var(--accent-color);
+
+  box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.15);
+
+  color: var(--complementary-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--hover-focus-color);
 }
 
 /* иконки в хедере */
@@ -629,16 +712,16 @@ img {
 }
 
 .antenna::before {
-  background-image: url(../images/antenna.svg);
+  background-image: url(../images/svg/antenna.svg);
 }
 .clock::before {
-  background-image: url(../images/clock.svg);
+  background-image: url(../images/svg/clock.svg);
 }
 .diagram::before {
-  background-image: url(../images/diagram.svg);
+  background-image: url(../images/svg/diagram.svg);
 }
 .astronaut::before {
-  background-image: url(../images/astronaut.svg);
+  background-image: url(../images/svg/astronaut.svg);
 }
 
 /* иконки клиентов */
@@ -730,7 +813,6 @@ img {
   color: var(--complementary-color);
 }
 .footer-wrap .footer-part {
-  
   flex-basis: calc(50% - 45px) / 2;
 }
 
@@ -740,15 +822,69 @@ img {
 .footer-wrap {
   display: flex;
   justify-content: space-between;
-}
-/* .footer-wrap {
-  display: flex;
-  flex-wrap: nowrap;
   align-items: baseline;
-} */
-/* .footer-part:not(:last-child) {
-  margin-right: 70px; */
 }
+
 .footer-icon {
   fill: var(--complementary-color);
+}
+.footer-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.email-form {
+  display: flex;
+}
+.footer-label {
+  display: block;
+}
+
+.email-input {
+  padding: 15px 16px;
+  height: 50px;
+  width: 358px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgb(47, 48, 58);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.email-input:focus,
+.email-input:hover {
+  border: 1px solid var(--accent-color);
+}
+.footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 12px;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  min-width: 200px;
+  height: 50px;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border-style: none;
+  color: var(--complementary-color);
+  background: var(--accent-color);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-send {
+  margin-left: 10px;
+}
+.footer-button:hover {
+  box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.15);
+  background-color: var(--hover-focus-color);
 }
