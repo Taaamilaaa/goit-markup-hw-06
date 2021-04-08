@@ -550,11 +550,11 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   border-radius: 4px;
 
-  padding: 40px 41px;
+  padding: 40px 40px;
 
   background-color: var(--complementary-color);
 }
@@ -564,6 +564,7 @@ img {
   top: 8px;
   right: 8px;
   margin-left: auto;
+  padding: 0px;
 
   width: 30px;
   height: 30px;
@@ -727,12 +728,10 @@ img {
 /* иконки клиентов */
 
 .client-icon {
-  fill: #afb1b8;
-  border: 1px solid #afb1b8;
-  border-radius: 3px;
+  width: 106px;
+  height: 60px;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #afb1b8;
 }
 .clients-list {
   display: inline-flex;
@@ -747,16 +746,29 @@ img {
 
 .client-link {
   display: flex;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-link:hover .client-icon {
+.client-link:hover {
+  border: 1px solid var(--accent-color);
+}
+
+/* .client-link:hover .client-icon {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
 .client-link:focus .client-icon {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
-}
+} */
 /* иконки соцсети */
 
 .social-icon {
