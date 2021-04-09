@@ -578,12 +578,18 @@ img {
   text-align: center;
   align-items: center;
   justify-content: center;
-}
 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .close-icon {
   width: 18px;
   height: 18px;
   fill: rgb(0, 0, 0);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: var(--accent-color);
 }
 .is-hidden {
   opacity: 0;
@@ -600,6 +606,7 @@ img {
   color: var(--title-color);
 }
 .input {
+  position: relative;
   margin-bottom: 10px;
   width: 100%;
   border: 1px solid rgba(21, 21, 21, 0.2);
@@ -613,6 +620,11 @@ img {
   letter-spacing: 0.01em;
 
   color: var(--main-text-color);
+}
+.form-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
 }
 
 .comments {
@@ -730,8 +742,9 @@ img {
 .client-icon {
   width: 106px;
   height: 60px;
-
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list {
   display: inline-flex;
@@ -761,14 +774,12 @@ img {
   border: 1px solid var(--accent-color);
 }
 
-/* .client-link:hover .client-icon {
+.client-link:hover .client-icon {
   fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
 }
 .client-link:focus .client-icon {
   fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-} */
+}
 /* иконки соцсети */
 
 .social-icon {
@@ -895,6 +906,7 @@ img {
 
 .icon-send {
   margin-left: 10px;
+  fill: currentColor;
 }
 .footer-button:hover {
   box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.15);
