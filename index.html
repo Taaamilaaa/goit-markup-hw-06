@@ -376,37 +376,46 @@
                     </button>
                 <form action="">
                     <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-                    <label class="label-form" for="name">Имя</label>                    
-                    <input class="input" name="name" type="text" id="name">
-                    <div>
-                        <svg width="18" height="18" class="form-icon">
-                            <use href="./images/svg-sprite1.svg#icon-person-black"></use>
-                        </svg>
+                     <div class="form-field">
+                        <label class="label-form" for="name">Имя</label>                    
+                        <input class="input" name="name" type="text" id="name">                   
+                            <svg width="18" height="18" class="form-icon">
+                                <use href="./images/svg-sprite1.svg#icon-person-black"></use>
+                            </svg>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="label-form" for="tel">Телефон</label>                    
+                        <input class="input" name="tel" type="tel" id="tel">                                     
+                            <svg width="18" height="18" class="form-icon">
+                                <use href="./images/svg-sprite1.svg#icon-phone-black"></use>
+                            </svg>
                     </div>
         
-                    <label class="label-form" for="tel">Телефон</label>                    
-                    <input class="input" name="tel" type="tel" id="tel"> 
-                     <div>                  
-                        <svg width="18" height="18" class="form-icon">
-                            <use href="./images/svg-sprite1.svg#icon-phone-black"></use>
-                        </svg>
+                    <div class="form-field">
+                        <label class="label-form" for="mail">Почта</label>                    
+                        <input class="input" name="mail" type="email" id="email">                                         
+                            <svg width="18" height="18" class="form-icon">
+                                <use href="./images/svg-sprite1.svg#icon-email-black"></use>
+                            </svg>
                     </div>
-        
-                    <label class="label-form" for="mail">Почта</label>                    
-                    <input class="input" name="mail" type="email" id="email">
-                     <div>                   
-                        <svg width="18" height="18" class="form-icon">
-                            <use href="./images/svg-sprite1.svg#icon-email-black"></use>
-                        </svg>
-                    </div>
-        
+
+                   
                     <label class="label-form" name="comments">Комментарий</label>
-                    <textarea class="input comments" id="comments" name="comments" placeholder="Введите текст" cols="30"
-                        rows="6"></textarea>
-        
-                    <input class="agree-chackbox" name="agree" type="checkbox"> <label class="agree-text" id="agree"
+                    <textarea class="comments" id="comments" name="comments" placeholder="Введите текст" cols="30"
+                        rows="7"></textarea>
+                    <div class="form-field">
+                        <input class="agree-checkbox" name="agree" type="checkbox"> <label class="agree-text" id="agree"
                         for="agree">Соглашаюсь
                         с рассылкой и принимаю <a class="agree-link" href="">Условия договора</a></label>
+                        <svg class="check-icon" width=16 height=15>
+                            <use href="./images/svg-sprite1.svg#icon-vector"></use>
+                        </svg>
+                        <svg class="agree-icon" width=16 height=15>
+                            <use href="./images/svg-sprite1.svg#icon-agree"></use>
+                        </svg>
+                    </div>
+
                     <button class="modal-button" type="submit">Отправить</button>
                 </form>
             </div>
