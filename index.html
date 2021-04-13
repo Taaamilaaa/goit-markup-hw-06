@@ -367,8 +367,7 @@
         </footer>
 
         <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-                
+            <div class="modal">                
                     <button data-modal-close class="modal-close-btn">
                         <svg width="18" height="18">
                             <use href="./images/svg-sprite1.svg#icon-close"></use>
@@ -393,29 +392,23 @@
                     </div>
         
                     <div class="form-field">
-                        <label class="label-form" for="mail">Почта</label>                    
+                        <label class="label-form" for="email">Почта</label>                    
                         <input class="input" name="mail" type="email" id="email">                                         
                             <svg width="18" height="18" class="form-icon">
                                 <use href="./images/svg-sprite1.svg#icon-email-black"></use>
                             </svg>
-                    </div>
-
-                   
-                    <label class="label-form" name="comments">Комментарий</label>
+                    </div>                   
+                    <label class="label-form" name="comments" for="comments" >Комментарий</label>
                     <textarea class="comments" id="comments" name="comments" placeholder="Введите текст" cols="30"
                         rows="7"></textarea>
-                    <div class="form-field">
-                        <input class="agree-checkbox" name="agree" type="checkbox"> <label class="agree-text" id="agree"
-                        for="agree">Соглашаюсь
-                        с рассылкой и принимаю <a class="agree-link" href="">Условия договора</a></label>
-                        <svg class="check-icon" width=16 height=15>
-                            <use href="./images/svg-sprite1.svg#icon-vector"></use>
-                        </svg>
-                        <svg class="agree-icon" width=16 height=15>
-                            <use href="./images/svg-sprite1.svg#icon-agree"></use>
-                        </svg>
+                    <div class="form-field check">                       
+                    <label class="agree-text" 
+                        for="agree">                            
+                        <input class="agree-checkbox" id="agree" name="agree" type="checkbox">
+                        <span class="check-icon"> </span>Соглашаюсь с рассылкой и принимаю <a class="agree-link" href="">Условия договора</a>
+                    </label>                                                
                     </div>
-
+       
                     <button class="modal-button" type="submit">Отправить</button>
                 </form>
             </div>
